@@ -10,7 +10,7 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 
-import underlineIcon from '../../theme/icons/underline.svg';
+import underlineIcon from '@ckeditor/ckeditor5-build-classic/img/ic-under-n.svg';
 
 const UNDERLINE = 'underline';
 
@@ -37,7 +37,8 @@ export default class UnderlineUI extends Plugin {
 				icon: underlineIcon,
 				keystroke: 'CTRL+U',
 				tooltip: true,
-				isToggleable: true
+				isToggleable: true,
+				class: 'ck-underline-button'
 			} );
 
 			view.bind( 'isOn', 'isEnabled' ).to( command, 'value', 'isEnabled' );
